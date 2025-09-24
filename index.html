@@ -31,11 +31,13 @@
 
       <div class="alpha-badge" aria-label="project state">ALPHA</div>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav-link active" href="#overview" data-route="overview">Overview</a>
-        <a class="nav-link" href="#weather" data-route="weather">Weather</a>
-        <a class="nav-link" href="#contact" data-route="contact">Contact</a>
-      </nav>
+  <nav class="nav" aria-label="Primary">
+  <a class="nav-link active" href="#overview" data-route="overview">Overview</a>
+  <a class="nav-link" href="#weather" data-route="weather">Weather</a>
+  <a class="nav-link" href="#campfire" data-route="campfire">Campfire</a>
+  <a class="nav-link" href="#contact" data-route="contact">Contact</a>
+</nav>
+
     </div>
   </header>
 
@@ -62,7 +64,9 @@
 
       <section class="cards">
         <div class="wrap grid">
-          <!-- Weather category card -->
+        
+        
+            <!-- Weather category card -->
           <a class="card link" href="#weather" data-route="weather">
             <div class="card-top">
               <h2 class="card-title">Weather</h2>
@@ -74,9 +78,74 @@
             </p>
             <span class="cta">Read</span>
           </a>
+
+          <a class="card link" href="#campfire" data-route="campfire">
+  <div class="card-top">
+    <h2 class="card-title">Campfire</h2>
+  </div>
+  <p class="card-text">
+    Learn how campfires are built, fueled, and maintained in <em>a long hike</em>.  
+    See how rocks, logs, weather, and survival systems all tie into your fire.
+  </p>
+  <span class="cta">Read</span>
+</a>
+
+
         </div>
       </section>
     </section>
+
+    <!-- CAMPFIRE VIEW -->
+<section id="view-campfire" class="view" role="region" aria-labelledby="campfire-heading">
+  <header class="page-header">
+    <div class="wrap">
+      <h1 id="campfire-heading">Campfire</h1>
+      <p class="sub">
+        Campfires are at the heart of survival — for warmth, cooking, and light in <em>a long hike</em>.
+      </p>
+      <div class="pill-row">
+        <span class="pill">warmth</span>
+        <span class="pill">fuel</span>
+        <span class="pill">teamwork</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Building a Campfire</h2>
+      <p>
+        Players gather rocks into a ring and add logs to create a campfire.  
+        Rocks form the structure; logs provide fuel. Campfires can’t be placed too close to carts or each other.
+      </p>
+
+      <h2>Fuel & Burning</h2>
+      <p>
+        Each log burns for a set time, influenced by <strong>weather</strong>, wind, and wetness.  
+        Wet logs are harder to light and burn shorter. Storms reduce fire strength and can even put it out.
+      </p>
+
+      <h2>Survival Impact</h2>
+      <ul>
+        <li><strong>Warmth:</strong> Fires keep players from freezing at night or in arctic biomes.</li>
+        <li><strong>Cooking:</strong> Meat, fish, and berries can be cooked for better nutrition.</li>
+        <li><strong>Light:</strong> Fires help spot dangers and keep monsters at bay.</li>
+      </ul>
+
+      <h2>Strategy</h2>
+      <p>
+        Work as a team: some gather rocks, others supply logs.  
+        Maintaining a strong campfire means survival during storms, cold fronts, or long nights.
+      </p>
+
+      <div class="end-nav">
+        <a class="btn outline" href="#overview" data-route="overview">← Back to Overview</a>
+        <a class="btn ghost top" href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </section>
+</section>
+
 
     <!-- WEATHER VIEW -->
     <section id="view-weather" class="view" role="region" aria-labelledby="weather-heading">

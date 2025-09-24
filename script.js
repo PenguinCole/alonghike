@@ -3,10 +3,11 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Build views map safely to avoid null errors
 const views = {};
-['overview', 'weather', 'contact'].forEach(id => {
+['overview', 'weather', 'campfire', 'contact'].forEach(id => {
   const el = document.getElementById('view-' + id);
   if (el) views[id] = el;
 });
+
 
 const navLinks = Array.from(document.querySelectorAll('.nav [data-route]'));
 
