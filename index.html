@@ -32,17 +32,21 @@
 
       <div class="alpha-badge" aria-label="project state">ALPHA</div>
 
-  <nav class="nav" aria-label="Primary">
+ <nav class="nav" aria-label="Primary">
   <a class="nav-link active" href="#overview" data-route="overview">Overview</a>
   <a class="nav-link" href="#weather" data-route="weather">Weather</a>
   <a class="nav-link" href="#campfire" data-route="campfire">Campfire</a>
+  <a class="nav-link" href="#animals" data-route="animals">Animals</a>
   <a class="nav-link" href="#contact" data-route="contact">Contact</a>
 </nav>
+
 
     </div>
   </header>
 
   <main id="main" tabindex="-1">
+    
+    
     <!-- OVERVIEW VIEW -->
     <section id="view-overview" class="view active" role="region" aria-labelledby="overview-heading">
       <div class="hero">
@@ -67,7 +71,7 @@
         <div class="wrap grid">
         
         
-            <!-- Weather category card -->
+     <!-- Weather category card -->
           <a class="card link" href="#weather" data-route="weather">
             <div class="card-top">
               <h2 class="card-title">Weather</h2>
@@ -80,6 +84,7 @@
             <span class="cta">Read</span>
           </a>
 
+         <!-- Campfire category card -->
 <a class="card link" href="#campfire" data-route="campfire">
   <div class="card-top">
     <h2 class="card-title">Campfire</h2>
@@ -90,6 +95,20 @@
   </p>
   <span class="cta">Read</span>
 </a>
+
+            <!-- Animals category card -->
+<a class="card link" href="#animals" data-route="animals">
+  <div class="card-top">
+    <h2 class="card-title">Animals</h2>
+    <span class="chip">New</span>
+  </div>
+  <p class="card-text">
+    Wildlife brings the world alive. Predators hunt, herbivores graze, packs defend their own, 
+    and babies grow with unique behavior and voices.
+  </p>
+  <span class="cta">Read</span>
+</a>
+
 
 
         </div>
@@ -202,7 +221,8 @@
 
       <section class="section">
         <div class="wrap prose">
-          <h2>Overview</h2>
+          <img class="weather-img" src="images/thunder.png" alt="Thunderstorm in a long hike" loading="lazy" />
+
           <p>
             Weather in <em>a long hike</em> is <strong>systemic</strong>, <strong>readable</strong>, and <strong>varied</strong>.
             It pressures planning (what to carry, when to move, where to camp) and creates tension arcs without scripting.
@@ -291,6 +311,102 @@
         </div>
       </section>
     </section>
+
+
+    <!-- ANIMALS VIEW -->   
+    <section id="view-animals" class="view" role="region" aria-labelledby="animals-heading">
+  <header class="page-header">
+    <div class="wrap">
+      <h1 id="animals-heading">Animals</h1>
+      <p class="sub">
+        The wild is never quiet — predators stalk, herds flee, babies call out, and every animal is
+        fully simulated with hunger, stamina, senses, and unique death/fleeing behaviors.
+      </p>
+      <div class="pill-row">
+        <span class="pill">Predators</span>
+        <span class="pill">Herbivores</span>
+        <span class="pill">AI-driven</span>
+        <span class="pill">Dynamic</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap prose">
+<img class="animals-img" src="images/animals.png" alt="Animals in a long hike" loading="lazy" />
+
+      <h2>Species</h2>
+      <p>
+        Current wildlife includes wolves, lions, tigers, black bears, grizzlies, moose, sheep, and pigs.  
+        Each species has <strong>unique stats</strong> for speed, damage, health, hunger rate, and aggression.
+      </p>
+      <ul>
+        <li><strong>Predators:</strong> Wolves (pack AI), lions, tigers, bears — chase prey and players, enraged when damaged.</li>
+        <li><strong>Herbivores:</strong> Moose, sheep, pigs — graze on bushes, flee when threatened, may group into herds.</li>
+        <li><strong>Babies:</strong> Smaller scale, reduced damage, higher-pitched vocalizations, less health, often stay near adults.</li>
+      </ul>
+
+      <h2>Behaviors</h2>
+      <ul>
+        <li><strong>Hunger:</strong> Ticks continuously. Predators hunt when hunger is high; herbivores graze bushes or water.</li>
+        <li><strong>Stamina:</strong> Drains while chasing, recovers at rest. Low stamina slows run speed.</li>
+        <li><strong>Perception:</strong> Vision cones, hearing distance, and smell affected by wind, weather, night/day, and enraged state.</li>
+        <li><strong>Packs:</strong> Wolves alert nearby packmates; damage to one wolf can trigger group aggression.</li>
+        <li><strong>Enrage:</strong> Predators damaged by a player gain heightened senses and longer chase memory.</li>
+        <li><strong>Baby Protection:</strong> Adults will aggro more aggressively if baby animals are nearby.</li>
+      </ul>
+
+      <h2>Combat</h2>
+      <ul>
+        <li><strong>Melee hits:</strong> Require distance + frontal cone + line of sight (no “back-stab” hits).</li>
+        <li><strong>Attack feedback:</strong> Red hit highlight + attack sound + damage SFX on the victim.</li>
+        <li><strong>Player damage:</strong> Reduces <code>MyHealth</code>, triggers scream SFX.</li>
+        <li><strong>Animal damage:</strong> Reduces both Humanoid health and AnimalData HP UI.</li>
+        <li><strong>Death:</strong> Plays scream SFX, fades model, drops meat/pelts/bones based on species + Pro Hunter bonus.</li>
+      </ul>
+
+      <h2>Environment Interaction</h2>
+      <ul>
+        <li><strong>Water:</strong> Animals avoid standing water but linger near edges to drink.</li>
+        <li><strong>Berries:</strong> Bears, pigs, moose, and sheep graze bushes when hungry.</li>
+        <li><strong>Weather:</strong> Thunderstorms lower visibility; bears’ eyes glow red at night.</li>
+        <li><strong>Temperature:</strong> Spawn rates and activity shift with cold/heat (e.g., moose thrive in cold, lions in warmth).</li>
+      </ul>
+
+      <h2>AI Spawning</h2>
+      <p>
+        Animals spawn dynamically based on habitat: water distance, cover, slope, berry bushes, player distance, and predator/prey separation.
+      </p>
+      <ul>
+        <li><strong>Plates:</strong> Each baseplate spawns up to 14 animals, separated by type and environment.</li>
+        <li><strong>Habitat preferences:</strong> Wolves prefer open ground, tigers dense cover, bears berries + water, moose lakeshores.</li>
+        <li><strong>Time of day:</strong> Wolves and tigers more active at night, sheep more active in daylight.</li>
+        <li><strong>Rare encounters:</strong> Sometimes predators and prey spawn unusually close.</li>
+      </ul>
+
+      <h2>Loot & Rewards</h2>
+      <ul>
+        <li><strong>Meat:</strong> Species-specific drops with weight values; babies drop smaller meat or none.</li>
+        <li><strong>Pelts:</strong> Wolves/bears drop pelts (chance scales with Pro Hunter pass).</li>
+        <li><strong>Bones:</strong> Wolves may drop bones.</li>
+        <li><strong>Pro Hunter pass:</strong> Doubles meat + loot chance.</li>
+        <li><strong>Friendly Animals pass:</strong> Prevents animals from aggroing the player.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Immersion:</strong> Every animal is <em>server-owned physics</em>, with pathfinding, hunger, hearing, smell, stamina, 
+        and death simulations. No spawners on rails — every encounter feels different.
+      </div>
+
+      <div class="end-nav">
+        <a class="btn outline" href="#overview" data-route="overview">← Back to Overview</a>
+        <a class="btn ghost top" href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+
 
     <!-- CONTACT VIEW -->
     <section id="view-contact" class="view" role="region" aria-labelledby="contact-heading">
