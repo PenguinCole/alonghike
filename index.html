@@ -95,48 +95,81 @@
       </section>
     </section>
 
-    <!-- CAMPFIRE VIEW -->
+
+<!-- CAMPFIRE VIEW -->
 <section id="view-campfire" class="view" role="region" aria-labelledby="campfire-heading">
   <header class="page-header">
     <div class="wrap">
       <h1 id="campfire-heading">Campfire</h1>
       <p class="sub">
-        Campfires are at the heart of survival — for warmth, cooking, and light in <em>a long hike</em>.
+        Campfires in <em>a long hike</em> are living systems — built from rocks and logs, influenced by weather,
+        and critical to survival.
       </p>
       <div class="pill-row">
         <span class="pill">warmth</span>
         <span class="pill">fuel</span>
         <span class="pill">teamwork</span>
+        <span class="pill">dynamic</span>
       </div>
     </div>
   </header>
 
   <section class="section">
     <div class="wrap prose">
-      <h2>Building a Campfire</h2>
+      <h2>Construction</h2>
       <p>
-        Players gather rocks into a ring and add logs to create a campfire.  
-        Rocks form the structure; logs provide fuel. Campfires can’t be placed too close to carts or each other.
+        Campfires begin as a ring of rocks. At least <strong>4 close rocks</strong> must be placed to form a valid campfire.
+        The ring creates coverage: the more rocks, the more shielded the fire is from rain and wind.
       </p>
 
-      <h2>Fuel & Burning</h2>
+      <h2>Rocks & Coverage</h2>
       <p>
-        Each log burns for a set time, influenced by <strong>weather</strong>, wind, and wetness.  
-        Wet logs are harder to light and burn shorter. Storms reduce fire strength and can even put it out.
+        Each rock in the ring increases <strong>coverage %</strong>.  
+        Coverage affects:
       </p>
-
-      <h2>Survival Impact</h2>
       <ul>
-        <li><strong>Warmth:</strong> Fires keep players from freezing at night or in arctic biomes.</li>
-        <li><strong>Cooking:</strong> Meat, fish, and berries can be cooked for better nutrition.</li>
-        <li><strong>Light:</strong> Fires help spot dangers and keep monsters at bay.</li>
+        <li><strong>Wind shielding:</strong> A complete ring reduces wind impact to ~20%.</li>
+        <li><strong>Rain shielding:</strong> A full ring reduces rain penalties by up to 25%.</li>
+        <li><strong>Stability:</strong> If all rocks are gone, the campfire collapses.</li>
       </ul>
 
-      <h2>Strategy</h2>
+      <h2>Logs & Fuel</h2>
       <p>
-        Work as a team: some gather rocks, others supply logs.  
-        Maintaining a strong campfire means survival during storms, cold fronts, or long nights.
+        Logs provide the actual fuel. Each log has a <strong>max fuel value</strong>, which burns down over time.
+        Burn duration is dynamic:
       </p>
+      <ul>
+        <li><strong>Base time:</strong> ~35 seconds for a dry log.</li>
+        <li><strong>Moisture:</strong> Wet logs burn shorter and release steam.</li>
+        <li><strong>Weather:</strong> Rain cuts fuel effectiveness; storms reduce it further.</li>
+        <li><strong>Temperature:</strong> Cold slows ignition; warmth extends burn slightly.</li>
+      </ul>
+
+      <h2>Fire Behavior</h2>
+      <ul>
+        <li><strong>Visuals:</strong> Fire particles, smoke, and light strength scale with burn rate.</li>
+        <li><strong>Audio:</strong> Fire crackle adjusts based on intensity; wet logs trigger <em>sizzle</em> sounds.</li>
+        <li><strong>UI:</strong> A burn bar shows remaining fuel. Green = healthy fire, Orange = low, Red = nearly out.</li>
+      </ul>
+
+      <h2>Player Impact</h2>
+      <ul>
+        <li><strong>Warmth:</strong> Prevents freezing in cold nights or arctic biomes.</li>
+        <li><strong>Cooking:</strong> Raw food becomes safe and more nourishing.</li>
+        <li><strong>Light:</strong> Expands visibility and helps deter night dangers.</li>
+      </ul>
+
+      <h2>Team Strategy</h2>
+      <p>
+        Fires require <strong>teamwork</strong>:  
+        while one player gathers rocks for coverage, others hunt for logs.  
+        Choosing when to burn fuel is key — waste logs too early, and you may not survive the night.
+      </p>
+
+      <div class="callout">
+        <strong>Dynamic Balance:</strong> Campfires in <em>a long hike</em> aren’t static props.  
+        They are fully simulated objects tied to environment and survival stats, making every fire session feel different.
+      </div>
 
       <div class="end-nav">
         <a class="btn outline" href="#overview" data-route="overview">← Back to Overview</a>
@@ -145,6 +178,9 @@
     </div>
   </section>
 </section>
+
+
+
 
 
     <!-- WEATHER VIEW -->
