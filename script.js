@@ -1,13 +1,12 @@
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Build views map safely to avoid null errors
+// Build views map dynamically from all .view sections
 const views = {};
-['overview', 'weather', 'campfire', 'contact'].forEach(id => {
-  const el = document.getElementById('view-' + id);
-  if (el) views[id] = el;
+document.querySelectorAll('section.view').forEach(sec => {
+  const id = sec.id.replace('view-', ''); // e.g. "view-campfire" -> "campfire"
+  views[id] = sec;
 });
-
 
 const navLinks = Array.from(document.querySelectorAll('.nav [data-route]'));
 
@@ -16,10 +15,10 @@ function setRoute(route) {
 
   // Toggle views
   Object.entries(views).forEach(([key, el]) => {
-    if (el) el.classList.toggle('active', key === route);
+    el.classList.toggle('active', key === route);
   });
 
-  // Toggle nav
+  // Toggle nav active states
   navLinks.forEach(a => {
     const r = a.getAttribute('data-route');
     a.classList.toggle('active', r === route);
