@@ -4,10 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>a long hike — welcome (alpha)</title>
-  <meta name="description" content="Official manual hub for a long hike (alpha). Overview, Weather system, and About the team at 10K Steps." />
-  <meta name="theme-color" content="#1F7A4A" />
+  <meta name="description" content="Official hub for a long hike (alpha). Overview, Weather system, and Contact links for the 10K Steps team." />
+  <meta name="theme-color" content="#194C7D" />
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="preload" href="style.css" as="style" />
+
+  <!-- Better font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,12 +32,8 @@
       <nav class="nav" aria-label="Primary">
         <a class="nav-link active" href="#overview" data-route="overview">Overview</a>
         <a class="nav-link" href="#weather" data-route="weather">Weather</a>
-        <a class="nav-link" href="#about" data-route="about">About us</a>
+        <a class="nav-link" href="#contact" data-route="contact">Contact</a>
       </nav>
-
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
@@ -40,12 +41,20 @@
     <!-- OVERVIEW VIEW -->
     <section id="view-overview" class="view active" role="region" aria-labelledby="overview-heading">
       <div class="hero">
-        <div class="wrap">
-          <h1 id="overview-heading">Welcome!</h1>
-          <p class="sub">
-            This is the official (alpha) site for <strong>a long hike</strong> — a survival adventure where every run
-            tells a new story. Use the top bar to explore systems. Start with <em>Weather</em> below.
-          </p>
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <h1 id="overview-heading">Welcome!</h1>
+            <p class="sub">
+              This is the official (alpha) site for <strong>a long hike</strong> — a survival adventure where every run
+              tells a new story. Use the top bar to explore systems. Start with <em>Weather</em> to see how atmosphere
+              shapes every mile.
+            </p>
+          </div>
+          <div class="hero-media">
+            <!-- Game thumbnail -->
+            <img class="hero-img" src="https://tr.rbxcdn.com/180DAY-3d25121007912646e3ce574c5e80b55e/768/432/Image/Webp/noFilter"
+                 alt="a long hike — game thumbnail" />
+          </div>
         </div>
       </div>
 
@@ -59,19 +68,10 @@
             </div>
             <p class="card-text">
               Storm buildup, rain intensity, lightning behavior, temperature shifts, wind & visibility,
-              and how atmosphere shapes decisions each mile.
+              and how atmosphere steers plans each mile.
             </p>
             <span class="cta">Read</span>
           </a>
-        </div>
-      </section>
-
-      <!-- Bottom CTA row -->
-      <section class="bottom-cta">
-        <div class="wrap">
-          <div class="cta-row">
-            <a class="btn outline" href="#about" data-route="about">About us</a>
-          </div>
         </div>
       </section>
     </section>
@@ -185,35 +185,71 @@
       </section>
     </section>
 
-  <!-- ABOUT VIEW -->
-<section id="view-about" class="view" role="region" aria-labelledby="about-heading">
-  <header class="page-header">
-    <div class="wrap">
-      <h1 id="about-heading">About us</h1>
-      <p class="sub">Get in touch if you need help with the game.</p>
-    </div>
-  </header>
+    <!-- CONTACT VIEW -->
+    <section id="view-contact" class="view" role="region" aria-labelledby="contact-heading">
+      <header class="page-header">
+        <div class="wrap">
+          <h1 id="contact-heading">Contact</h1>
+          <p class="sub">Questions, bugs, suggestions — we’ve got you.</p>
+        </div>
+      </header>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="about-box">
-        <p>
-          You can contact us if you need any help with <em>a long hike</em>,  
-          have questions about the game, want to report bugs, or share suggestions.
-        </p>
-        <p>
-          Email: <a href="mailto:info.nukesstudios@gmail.com">info.nukesstudios@gmail.com</a>
-        </p>
-      </div>
+      <section class="section">
+        <div class="wrap">
+          <div class="contact-box">
+            <p>
+              Need help with <em>a long hike</em> or want to reach the team? Ping us on Discord,
+              or use the links below.
+            </p>
 
-      <div class="end-nav">
-        <a class="btn outline" href="#overview" data-route="overview">← Back to Overview</a>
-      </div>
-    </div>
-  </section>
-</section>
+            <div class="link-stack">
+              <!-- Discord -->
+              <a class="contact-link" href="https://discord.gg/7pujeRNB7c" target="_blank" rel="noopener">
+                <span class="icon">
+                  <!-- Discord SVG -->
+                  <svg viewBox="0 0 245 240" width="22" height="22" aria-hidden="true">
+                    <path fill="currentColor" d="M104.4 104.9c-5.7 0-10.2 5-10.2 11.1 0 6.1 4.6 11.1 10.2 11.1 5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.2 0c-5.7 0-10.2 5-10.2 11.1 0 6.1 4.6 11.1 10.2 11.1 5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1zM189.5 20h-134C36.2 20 20 36.2 20 56.2v127.6C20 203.8 36.2 220 56.2 220h114.3l-5.4-18.9 13.1 12.1 12.4 11.5 22 19.2V56.2C212.6 36.2 196.4 20 176.4 20zm-33 135s-3.1-3.7-5.7-7c11.4-3.2 15.8-10.3 15.8-10.3-3.6 2.4-7 4.1-10 5.2-4.4 1.8-8.6 3.1-12.7 3.9-8.4 1.6-16.1 1.2-22.8-.1-5-1-9.3-2.3-12.8-3.9-2-1-4.2-2.1-6.4-3.6-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.7-1.7-2.7-1.7s4.2 6.9 15.3 10.2c-2.6 3.3-5.8 7.1-5.8 7.1-19.2-.6-26.5-13.2-26.5-13.2 0-28 12.5-50.7 12.5-50.7 12.5-9.3 24.4-9 24.4-9l.9 1c-15.6 4.5-22.8 11.3-22.8 11.3s1.9-1.1 5.1-2.7c9.3-4.1 16.6-5.2 19.7-5.5.5-.1.9-.2 1.4-.2 5-0.7 10.5-0.9 16.3-0.2 7.7.3 15.9 1.1 24.3 4.2 11.4 4.2 23.6 10.5 36.1 26.2 0 0-7.1 12.7-26.3 13.3z"/>
+                  </svg>
+                </span>
+                <span>Join our Discord</span>
+              </a>
 
+              <!-- Firemalte07 -->
+              <a class="contact-link" href="https://www.roblox.com/users/250672732/profile" target="_blank" rel="noopener">
+                <span class="icon roblox">
+                  <!-- simple diamond Roblox icon -->
+                  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3 8.5 8.5 3 21 15.5 15.5 21 3 8.5Zm9.2 1.3-2.5 2.5 2.5 2.5 2.5-2.5-2.5-2.5Z"/></svg>
+                </span>
+                <span>Firemalte07 — Roblox profile</span>
+              </a>
 
+              <!-- BAiLeymen -->
+              <a class="contact-link" href="https://www.roblox.com/users/141072202/profile" target="_blank" rel="noopener">
+                <span class="icon roblox">
+                  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3 8.5 8.5 3 21 15.5 15.5 21 3 8.5Zm9.2 1.3-2.5 2.5 2.5 2.5 2.5-2.5-2.5-2.5Z"/></svg>
+                </span>
+                <span>BAiLeymen — Roblox profile</span>
+              </a>
+
+              <!-- 10K Steps Group -->
+              <a class="contact-link" href="https://www.roblox.com/communities/596089868/10K-Steps#!/about" target="_blank" rel="noopener">
+                <span class="icon group">
+                  <!-- uses the provided path; tinted via currentColor -->
+                  <svg viewBox="0 440 64 80" width="18" height="18" aria-hidden="true">
+                    <path d="M60.6667 450H3.33333C2.59695 450 2 450.597 2 451.333V508.667C2 509.403 2.59695 510 3.33333 510H60.6667C61.403 510 62 509.403 62 508.667V451.333C62 450.597 61.403 450 60.6667 450Z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span>10K Steps — Roblox group</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="end-nav">
+            <a class="btn outline" href="#overview" data-route="overview">← Back to Overview</a>
+          </div>
+        </div>
+      </section>
+    </section>
   </main>
 
   <footer class="footer">
