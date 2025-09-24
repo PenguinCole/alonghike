@@ -1,15 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Long Hike</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Long Hike — Official Game Overview</title>
+  <meta name="description" content="A Long Hike is a survival adventure on a massive island. Learn the systems, biomes, crafting, weather, and multiplayer features." />
+  <meta name="theme-color" content="#1e3a34" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello World</h1>
-  <p>Welcome to the official site for <strong>A Long Hike</strong>.</p>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">🏕️</span>
+        <span class="brand-text">A Long Hike</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#how">How It Works</a>
+        <a href="#survival">Survival Systems</a>
+        <a href="#crafting">Build & Craft</a>
+        <a href="#gather">Gather & Trade</a>
+        <a href="#biomes">Biomes</a>
+        <a href="#multiplayer">Multiplayer</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="container hero-inner">
+      <h1>Every mile is a story.</h1>
+      <p class="tagline">
+        A survival adventure for up to six friends.  
+        Start with a cart. Travel 12 miles. Weather, wildlife, and random events shape every run.
+      </p>
+      <div class="chips">
+        <span class="chip">Procedural runs</span>
+        <span class="chip">Dynamic weather</span>
+        <span class="chip">Handcrafted systems</span>
+        <span class="chip">Mobile-ready</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>What is <em>A Long Hike</em>?</h2>
+      <p>
+        <strong>A Long Hike</strong> is a survival adventure where every run feels like a brand-new story.
+        You and up to six friends arrive on a massive island with just a cart, a few basic supplies, and the
+        goal of making it <strong>12 miles</strong> through the wilderness to the checkpoint. The journey won’t be easy — and that’s the point.
+      </p>
+      <div class="grid three">
+        <div class="card">
+          <h3>🌲 Survive the Wild</h3>
+          <p>Forests, rivers, hills, campsites, and buildings re-generate each run and are filled with loot, resources, and surprises. Animals roam; monsters stalk at night or in abandoned structures. Random events keep every mile unpredictable.</p>
+        </div>
+        <div class="card">
+          <h3>🔧 Systems-Driven</h3>
+          <p>Fire spreads, rain wets logs, food spoils in weather, water must be boiled or filtered, and lightning can set objects ablaze — even shake your camera on impact.</p>
+        </div>
+        <div class="card">
+          <h3>🎒 Progress & Mastery</h3>
+          <p>Grind safer biomes to earn cash, buy gear, and flex advanced equipment as you take on harsher environments and longer runs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="section alt">
+    <div class="container">
+      <h2>How It Works</h2>
+      <ol class="steps">
+        <li><span>1</span> Spawn with a cart and basic supplies.</li>
+        <li><span>2</span> Scout the island — routes, camps, structures, risks.</li>
+        <li><span>3</span> Hunt, fish, forage, and loot to stock the cart.</li>
+        <li><span>4</span> Build, craft, and <em>weld</em> structures onto your cart; pack up and move.</li>
+        <li><span>5</span> Manage hunger, thirst, and temperature as weather shifts.</li>
+        <li><span>6</span> Hit mile markers, survive events, and reach the 12-mile checkpoint.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Survival Systems -->
+  <section id="survival" class="section">
+    <div class="container">
+      <h2>Survival Systems 💧🥩🌡️</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Stats That React</h3>
+          <p>Hunger, thirst, and body temperature respond to weather, time, and activity. Buckets fill in rain or rivers. Water must be boiled or filtered; let it sit too long on a fire and it evaporates.</p>
+        </div>
+        <div class="card">
+          <h3>Fire & Weather</h3>
+          <p>Campfires use rocks and logs; logs get wet in rain. Fire spreads to flammables. Thunderstorms bring rolling clouds and lightning strikes that ignite objects.</p>
+        </div>
+        <div class="card">
+          <h3>Cooking & Spoilage</h3>
+          <p>Roast meat, grill fish, and forage berries — but food left out in stormy weather will spoil, pushing you to plan meals around the elements.</p>
+        </div>
+        <div class="card">
+          <h3>Down but Not Out</h3>
+          <p>If you fall, teammates can revive you with medkits, restoring your stats and giving you another shot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Build & Craft -->
+  <section id="crafting" class="section alt">
+    <div class="container">
+      <h2>Build, Craft, and Adapt 🔨🔥</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Blueprints</h3>
+          <p>Combine resources into weapons, tools, and gear. Build structures and weld them onto your cart — then pack them up when it’s time to roll.</p>
+        </div>
+        <div class="card">
+          <h3>Campfires</h3>
+          <p>Place rocks, add logs, light the flame. Fuel runs out if you’re careless; wet logs resist burning until dried.</p>
+        </div>
+        <div class="card">
+          <h3>Cart as a Base</h3>
+          <p>Your cart carries your story: storage, add-ons, and welded builds that evolve as you push deeper into the island.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gather & Trade -->
+  <section id="gather" class="section">
+    <div class="container">
+      <h2>Gather, Loot, and Trade 🎣🍓💰</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Fishing</h3>
+          <p>Cast into lakes and rivers; cook your catch at camp.</p>
+        </div>
+        <div class="card">
+          <h3>Foraging & Hunting</h3>
+          <p>Collect berries and resources; hunt pigs, sheep, wolves, and bears for meat and pelts.</p>
+        </div>
+        <div class="card">
+          <h3>Loot & Shops</h3>
+          <p>Explore structures for valuables, sell at sniper-guarded safezones, and hit lobby shops that refresh every five minutes — including rare finds like the Gold Rifle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Biomes -->
+  <section id="biomes" class="section alt">
+    <div class="container">
+      <h2>Biomes & Progression ❄️🏜️🌲</h2>
+      <div class="grid three">
+        <div class="card biome">
+          <h3>Forest</h3>
+          <p>Balanced, classic survival. Great for learning systems and grinding cash.</p>
+        </div>
+        <div class="card biome">
+          <h3>Desert</h3>
+          <p>Scorching heat, scarce water, aggressive wildlife. Hydration strategy is king.</p>
+        </div>
+        <div class="card biome">
+          <h3>Arctic</h3>
+          <p>Bitter cold where tents, pelts, and fires stand between you and frostbite.</p>
+        </div>
+      </div>
+      <p class="note">Progression ties it all together: master one biome to prepare for the next.</p>
+    </div>
+  </section>
+
+  <!-- Multiplayer -->
+  <section id="multiplayer" class="section">
+    <div class="container">
+      <h2>Multiplayer & Polish 🤝</h2>
+      <ul class="bullets">
+        <li>Up to <strong>six players</strong> per run — more players means more carts.</li>
+        <li>Cinematic intro, dramatic ending sequences, and a final base event where teamwork builds the bridge to escape.</li>
+        <li>Badges every two miles and a special win badge at 12 miles.</li>
+        <li>Fully optimized mobile controls designed for touch.</li>
+        <li>Hundreds of tweaks: from welding to weather realism for smooth gameplay.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section alt">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="accordion">
+        <button class="acc" aria-expanded="false">Is each run really different?</button>
+        <div class="panel">
+          <p>Yes. Terrain, structures, wildlife, events, weather, and loot vary every run — your route and decisions create the story.</p>
+        </div>
+
+        <button class="acc" aria-expanded="false">Is this site for playing?</button>
+        <div class="panel">
+          <p>No — this site explains the game. You play on Roblox. (We’ll add official links when the game page is public.)</p>
+        </div>
+
+        <button class="acc" aria-expanded="false">How many players can join?</button>
+        <div class="panel">
+          <p>Up to six per run. With more players, the caravan expands with more carts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> A Long Hike • An OK Games / Nukes Studios project</p>
+      <a class="top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
