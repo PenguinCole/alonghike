@@ -142,17 +142,50 @@ body{
 .contact-link .icon{ display:inline-grid; place-items:center; color:var(--blue); }
 
 /* ===== Buttons ===== */
-.btn{
-  appearance:none; border-radius:999px; cursor:pointer; user-select:none;
-  padding:12px 18px; font-weight:700; letter-spacing:.2px;
-  transition: background-color .2s, color .2s, border-color .2s, transform .08s, box-shadow .2s;
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;           /* less rounded, more modern */
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
 }
-.btn.solid{ color:var(--white); background:var(--blue); border:1px solid var(--blue); box-shadow:var(--shadow); }
-.btn.solid:hover{ background:var(--blue-700); border-color:var(--blue-700); transform: translateY(-1px); }
-.btn.outline{ color:var(--blue); background:transparent; border:1px solid var(--blue); }
-.btn.outline:hover{ background:var(--blue-soft); }
-.btn.ghost{ color:var(--muted); background:transparent; border:1px dashed rgba(25,76,125,.4); }
-.btn.ghost:hover{ color:var(--blue); border-color:var(--blue); background:var(--blue-soft); }
+/* Solid button */
+.btn.solid {
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  box-shadow: var(--shadow);
+}
+.btn.solid:hover {
+  background: var(--blue-700);
+  transform: translateY(-2px);
+}
+
+/* Outline button */
+.btn.outline {
+  background: transparent;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+.btn.outline:hover {
+  background: var(--blue-soft);
+  transform: translateY(-2px);
+}
+
+/* Ghost button */
+.btn.ghost {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+}
+.btn.ghost:hover {
+  color: var(--blue);
+  background: var(--blue-soft);
+  transform: translateY(-2px);
+}
 
 /* ===== Footer ===== */
 .footer{ border-top:var(--border); color:var(--muted); }
