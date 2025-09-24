@@ -30,7 +30,7 @@ function setRoute(route) {
   }
 
   // Focus main for keyboard users
-  document.getElementById('main').focus({ preventScroll: true });
+  // document.getElementById('main').focus({ preventScroll: true });
 }
 
 // Delegate clicks for SPA navigation
