@@ -12,13 +12,14 @@
 }
 .campfire-img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  border: var(--border);
+  border-radius: 16px;   /* same as hero */
+  border: var(--border); /* same as hero */
+  box-shadow: var(--shadow); /* same as hero */
 }
+
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
@@ -202,3 +203,68 @@ body{
 
 /* Accessibility focus */
 a:focus, button:focus{ outline:2px solid var(--blue); outline-offset:2px; border-radius:6px; }
+
+/* ===== Mobile polish ===== */
+html, body { width: 100%; overflow-x: hidden; }
+img, svg, video { max-width: 100%; height: auto; }
+
+/* make sticky header play nice with notches */
+.banner { padding-top: max(0px, env(safe-area-inset-top)); }
+
+/* Header + nav wrap on narrow screens */
+@media (max-width: 720px){
+  .banner .wrap{ flex-wrap: wrap; gap: 10px; padding: 10px 0; }
+  .brand{ min-width: 0; flex: 1 1 auto; }
+  .owner{ display:none; }               /* hide tiny owner text */
+  .alpha-badge{ order:3; margin: 6px 0 0 0; }  /* push badge below brand */
+
+  .nav{
+    order: 4;
+    margin-left: 0;
+    width: 100%;
+    overflow-x: auto;                   /* scroll if needed */
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 6px;
+    border-top: var(--border);
+  }
+  .nav-link{
+    flex: 0 0 auto;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  /* Hero spacing + single column (you already switch at 900px, this tightens spacing) */
+  .hero{ padding: 34px 0 22px; }
+  .hero .sub{ font-size: 0.96rem; }
+
+  /* Cards feel lighter on mobile */
+  .cards{ padding-top: 16px; }
+  .card{ padding: 14px; border-radius: 12px; }
+  .card-title{ font-size: 1.1rem; }
+  .card-text{ font-size: 0.96rem; }
+
+  /* Headers/sections tighter */
+  .page-header{ padding: 32px 0 16px; }
+  .page-header h1{ font-size: clamp(1.5rem, 5.6vw, 2.1rem); }
+  .section{ padding: 20px 0 28px; }
+
+  /* Multi-column lists -> single (safety even below your 900px rule) */
+  .cols{ columns: 1; }
+
+  /* Pills wrap nicer */
+  .pill{ font-size: 0.8rem; padding: 6px 10px; }
+
+  /* Contact buttons don’t overflow */
+  .link-stack{ grid-template-columns: 1fr; }
+  .contact-link{ padding: 10px 12px; }
+}
+
+/* Ultra-small phones */
+@media (max-width: 380px){
+  .logo{ width: 34px; height: 34px; border-radius: 8px; }
+  .game-name{ font-size: 0.98rem; }
+  .alpha-badge{ font-size: .72rem; padding: 5px 8px; }
+  .btn{ padding: 9px 16px; font-size: 0.9rem; }
+  .wrap{ width: min(100%, 94%); }
+}
