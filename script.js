@@ -1,38 +1,39 @@
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// SPA-style router (hash or data-route)
+// Views (SPA-style)
 const views = {
-  intro: document.getElementById('view-intro'),
-  weather: document.getElementById('view-weather')
+  overview: document.getElementById('view-overview'),
+  weather: document.getElementById('view-weather'),
+  about: document.getElementById('view-about')
 };
-const navLinks = Array.from(document.querySelectorAll('[data-route]'));
+
+const navLinks = Array.from(document.querySelectorAll('.nav [data-route]'));
 
 function setRoute(route) {
-  // default to intro
-  if (!views[route]) route = 'intro';
+  if (!views[route]) route = 'overview';
 
-  // toggle view
+  // Toggle views
   Object.entries(views).forEach(([key, el]) => {
     el.classList.toggle('active', key === route);
   });
 
-  // toggle nav active state
+  // Toggle nav active states
   navLinks.forEach(a => {
     const r = a.getAttribute('data-route');
-    a.classList.toggle('active', r === route && a.tagName === 'A');
+    a.classList.toggle('active', r === route);
   });
 
-  // update hash without jumping the page around
-  if (location.hash.replace('#', '') !== route) {
+  // Keep URL hash tidy
+  if (location.hash.replace('#','') !== route) {
     history.replaceState(null, '', `#${route}`);
   }
 
-  // focus main for better a11y (skip on initial load for smoother feel)
+  // Focus main (for keyboard users)
   document.getElementById('main').focus({ preventScroll: true });
 }
 
-// Click handlers for any element with data-route
+// Global click handler for any [data-route]
 document.addEventListener('click', (e) => {
   const el = e.target.closest('[data-route]');
   if (!el) return;
@@ -41,8 +42,8 @@ document.addEventListener('click', (e) => {
   e.preventDefault();
 });
 
-// On first load, honor hash (#weather or #intro)
+// On load, honor hash route (e.g., #weather)
 window.addEventListener('DOMContentLoaded', () => {
-  const initial = (location.hash || '#intro').replace('#', '');
+  const initial = (location.hash || '#overview').replace('#','');
   setRoute(initial);
 });

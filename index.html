@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>a long hike — manual (alpha)</title>
-  <meta name="description" content="The official manual for a long hike (alpha). Learn how systems like weather shape each run." />
+  <title>a long hike — welcome (alpha)</title>
+  <meta name="description" content="Official manual hub for a long hike (alpha). Overview, Weather system, and About the team at 10K Steps." />
   <meta name="theme-color" content="#1F7A4A" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preload" href="style.css" as="style" />
@@ -14,7 +14,7 @@
   <!-- Top Banner -->
   <header class="banner">
     <div class="wrap">
-      <a class="brand" href="#intro" data-route="intro" aria-label="a long hike — home">
+      <a class="brand" href="#overview" data-route="overview" aria-label="a long hike — overview">
         <img class="logo" src="https://tr.rbxcdn.com/180DAY-59192769a8c80e13698f907ee29bb154/150/150/Image/Webp/noFilter" alt="a long hike logo" />
         <div class="brand-text">
           <strong class="game-name">a long hike</strong>
@@ -25,12 +25,9 @@
       <div class="alpha-badge" aria-label="project state">ALPHA</div>
 
       <nav class="nav" aria-label="Primary">
-        <a class="nav-link active" href="#intro" data-route="intro">Intro</a>
+        <a class="nav-link active" href="#overview" data-route="overview">Overview</a>
         <a class="nav-link" href="#weather" data-route="weather">Weather</a>
-        <!-- Future categories (disabled for now) -->
-        <span class="nav-link disabled" title="Coming soon">Biomes</span>
-        <span class="nav-link disabled" title="Coming soon">Crafting</span>
-        <span class="nav-link disabled" title="Coming soon">Survival</span>
+        <a class="nav-link" href="#about" data-route="about">About us</a>
       </nav>
 
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -40,51 +37,40 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <!-- INTRO VIEW -->
-    <section id="view-intro" class="view active" role="region" aria-labelledby="intro-heading">
+    <!-- OVERVIEW VIEW -->
+    <section id="view-overview" class="view active" role="region" aria-labelledby="overview-heading">
       <div class="hero">
         <div class="wrap">
-          <h1 id="intro-heading">Manual</h1>
+          <h1 id="overview-heading">Welcome!</h1>
           <p class="sub">
-            Welcome to the official manual for <strong>a long hike</strong>. This site is an overview of systems and design —
-            focused and readable. Select a category to dive in.
+            This is the official (alpha) site for <strong>a long hike</strong> — a survival adventure where every run
+            tells a new story. Use the top bar to explore systems. Start with <em>Weather</em> below.
           </p>
-          <div class="cta-row">
-            <a class="btn solid" href="#weather" data-route="weather">Open Weather</a>
-          </div>
         </div>
       </div>
 
       <section class="cards">
         <div class="wrap grid">
-          <!-- One visible category for now -->
+          <!-- Weather category card -->
           <a class="card link" href="#weather" data-route="weather">
             <div class="card-top">
               <h2 class="card-title">Weather</h2>
               <span class="chip">Featured</span>
             </div>
             <p class="card-text">
-              Storm buildup, rain intensity, lightning behavior, temperature shifts, wind and visibility,
-              and how weather shapes decision-making every mile.
+              Storm buildup, rain intensity, lightning behavior, temperature shifts, wind & visibility,
+              and how atmosphere shapes decisions each mile.
             </p>
             <span class="cta">Read</span>
           </a>
+        </div>
+      </section>
 
-          <!-- Placeholder cards -->
-          <div class="card disabled">
-            <div class="card-top">
-              <h2 class="card-title">Biomes</h2>
-              <span class="chip muted">Soon</span>
-            </div>
-            <p class="card-text">Forest, Desert, Arctic — pacing, hazards, and route planning.</p>
-          </div>
-
-          <div class="card disabled">
-            <div class="card-top">
-              <h2 class="card-title">Crafting</h2>
-              <span class="chip muted">Soon</span>
-            </div>
-            <p class="card-text">Blueprints, welding to cart, camp setup, tools & gear.</p>
+      <!-- Bottom CTA row -->
+      <section class="bottom-cta">
+        <div class="wrap">
+          <div class="cta-row">
+            <a class="btn outline" href="#about" data-route="about">About us</a>
           </div>
         </div>
       </section>
@@ -96,7 +82,7 @@
         <div class="wrap">
           <h1 id="weather-heading">Weather</h1>
           <p class="sub">
-            How atmosphere evolves across a run — shaping survival, pacing, and the stories you tell.
+            How atmosphere evolves across a run — pacing survival, planning, and the stories you tell.
           </p>
           <div class="pill-row">
             <span class="pill">buildup → danger → relief</span>
@@ -110,9 +96,8 @@
         <div class="wrap prose">
           <h2>Overview</h2>
           <p>
-            Weather in <em>a long hike</em> is designed to be <strong>systemic</strong>, <strong>predictable-enough</strong> to read,
-            and <strong>varied</strong> enough to make every mile feel different. It pressures planning (what to carry, when to move, where to camp),
-            and creates tension arcs without scripting.
+            Weather in <em>a long hike</em> is <strong>systemic</strong>, <strong>readable</strong>, and <strong>varied</strong>.
+            It pressures planning (what to carry, when to move, where to camp) and creates tension arcs without scripting.
           </p>
 
           <h2>States & Transitions</h2>
@@ -120,14 +105,14 @@
             <li><strong>Clear:</strong> max visibility, light breeze.</li>
             <li><strong>Overcast:</strong> cloud cover grows; light desaturates.</li>
             <li><strong>Light Rain:</strong> surface wetness, mild chill; buckets fill slowly.</li>
-            <li><strong>Heavy Rain:</strong> low visibility; faster wetness; fire suppression likely.</li>
+            <li><strong>Heavy Rain:</strong> visibility loss; faster wetness; fire suppression likely.</li>
             <li><strong>Thunderstorm:</strong> lightning strikes; thunder delay by distance; gusts peak.</li>
             <li><strong>Cold Front:</strong> sustained temperature drop; arctic becomes dangerous fast.</li>
-            <li><strong>Heat Wave:</strong> desert bias; hydration loss spikes; shade becomes strategy.</li>
+            <li><strong>Heat Wave:</strong> desert bias; hydration loss spikes; shade is strategy.</li>
           </ul>
 
           <div class="callout">
-            <strong>Storm Buildup:</strong> cloud mass and darkness ramp for ~20 seconds before rain and thunder begin,
+            <strong>Storm Buildup:</strong> cloud mass & darkness ramp for ~20s before rain and thunder begin,
             with wind-up audio and distant thunder cues.
           </div>
 
@@ -135,20 +120,20 @@
           <ul>
             <li>Each mile rolls a window: none / light / severe, with duration and cooldown bounds.</li>
             <li>Biomes weight outcomes: Forest balanced; Desert heat/gusts; Arctic cold fronts/blizzards.</li>
-            <li>Streak prevention avoids identical severe events back-to-back unless the run’s profile is storm-heavy.</li>
+            <li>Anti-streak rules avoid identical severe events back-to-back unless the run profile is storm-heavy.</li>
           </ul>
 
           <h2>Player Impact</h2>
           <h3>Temperature</h3>
           <ul>
-            <li>Driven by time of day, biome, elevation, wind, and precipitation.</li>
+            <li>Driven by time, biome, elevation, wind, and precipitation.</li>
             <li>Cold → higher calorie burn & hypothermia risk; tents/pelts/fire counter it.</li>
             <li>Heat → faster thirst & heatstroke risk; shade/hydration mitigate.</li>
           </ul>
 
           <h3>Water</h3>
           <ul>
-            <li>Buckets fill in rain and rivers; must be boiled or filtered before drinking.</li>
+            <li>Buckets fill in rain and rivers; must be boiled/filtered before drinking.</li>
             <li>Water placed on fires can evaporate if left too long.</li>
           </ul>
 
@@ -161,40 +146,81 @@
 
           <h3>Food</h3>
           <ul>
-            <li>Exposure and humidity affect spoilage rates; cold slows decay, heat/humidity accelerate it.</li>
+            <li>Exposure & humidity affect spoilage; cold slows decay, heat/humidity accelerate it.</li>
           </ul>
 
           <h3>Wind & Visibility</h3>
           <ul>
             <li>Baseline wind plus gusts during events; gusts sway foliage and push smoke.</li>
-            <li>Heavy rain reduces draw distance; lightning flash + thunder roll give strike distance feedback.</li>
+            <li>Heavy rain reduces draw distance; lightning flash + thunder roll give strike-distance feedback.</li>
           </ul>
 
           <h2>Strategy</h2>
           <ul>
-            <li><strong>Shelter:</strong> tents/caves/structures block wetting and chilling; fire inside shelter gives best heat per fuel.</li>
+            <li><strong>Shelter:</strong> tents/caves/structures block wetting & chilling; fire inside shelter yields best heat per fuel.</li>
             <li><strong>Cart as Base:</strong> carry fuel, water, tents — mass vs. travel speed tradeoff.</li>
-            <li><strong>Route Choice:</strong> push miles under clear skies, bunker down during buildup.</li>
+            <li><strong>Route Choice:</strong> push miles under clear skies; bunker during buildup.</li>
           </ul>
 
           <h2>Balancing</h2>
           <ul>
             <li>Severe events have max durations with guaranteed lulls to avoid unwinnable loops.</li>
             <li>Fairness: lightning avoids repeated immediate strikes on the same player.</li>
-            <li>Early miles bias to teach reading weather safely.</li>
+            <li>Early miles bias toward safe learning of weather reading.</li>
           </ul>
 
           <h2>Tuning Levers</h2>
           <ul class="cols">
-            <li>Rain fade-in/fade-out times</li><li>Min/max lightning interval</li>
-            <li>Gust frequency & strength</li><li>Wet→dry recovery rates</li>
-            <li>Food spoil multipliers</li><li>Temperature shifts per biome/time</li>
-            <li>Event duration/cooldowns</li><li>Visibility reduction per state</li>
+            <li>Rain fade-in/out</li><li>Lightning interval</li>
+            <li>Gust frequency/strength</li><li>Wet→dry recovery</li>
+            <li>Food spoil multipliers</li><li>Temp shifts per biome/time</li>
+            <li>Event durations/cooldowns</li><li>Visibility reduction per state</li>
           </ul>
 
           <div class="end-nav">
-            <a class="btn outline" href="#intro" data-route="intro">← Back to Intro</a>
-            <a class="btn ghost top" href="#top">Back to top ↑</a>
+            <a class="btn outline" href="#overview" data-route="overview">← Back to Overview</a>
+            <a class="btn ghost top" href="#overview" data-route="overview">Back to top ↑</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ABOUT VIEW -->
+    <section id="view-about" class="view" role="region" aria-labelledby="about-heading">
+      <header class="page-header">
+        <div class="wrap">
+          <h1 id="about-heading">About us</h1>
+          <p class="sub">The team behind <em>a long hike</em> and how to reach us.</p>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="wrap prose about">
+          <h2>Team</h2>
+          <p><strong>10K Steps</strong> is the creator and copyright owner of <em>a long hike</em>.</p>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <h3>Production</h3>
+              <p>Direction, scheduling, QA, releases.</p>
+            </div>
+            <div class="about-card">
+              <h3>Design</h3>
+              <p>Systems, survival balance, UX writing.</p>
+            </div>
+            <div class="about-card">
+              <h3>Engineering</h3>
+              <p>Gameplay, networking, tools.</p>
+            </div>
+          </div>
+
+          <h2>Contact</h2>
+          <p>
+            General inquiries: <a href="mailto:contact@alonghike.io">contact@alonghike.io</a>
+          </p>
+
+          <div class="end-nav">
+            <a class="btn outline" href="#overview" data-route="overview">← Back to Overview</a>
           </div>
         </div>
       </section>
