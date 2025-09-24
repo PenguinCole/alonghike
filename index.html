@@ -3,228 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A Long Hike — Official Game Overview</title>
-  <meta name="description" content="A Long Hike is a survival adventure on a massive island. Learn the systems, biomes, crafting, weather, and multiplayer features." />
-  <meta name="theme-color" content="#1e3a34" />
+  <title>A Long Hike — Manual (Weather)</title>
+  <meta name="theme-color" content="#1F7A4A" />
+  <meta name="description" content="A Long Hike manual. Press Weather to read the complete design for storms, rain, temperature, wind, and survival interactions.">
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="preload" href="style.css" as="style" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top">
-        <span class="brand-mark">🏕️</span>
-        <span class="brand-text">A Long Hike</span>
+  <!-- Banner -->
+  <header class="banner">
+    <div class="wrap">
+      <a class="brand" href="#top" id="top">
+        <img class="logo" src="https://tr.rbxcdn.com/180DAY-59192769a8c80e13698f907ee29bb154/150/150/Image/Webp/noFilter" alt="A Long Hike logo">
+        <div class="brand-text">
+          <strong>A Long Hike</strong>
+          <span class="owner">© 10K Steps</span>
+        </div>
       </a>
-
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#how">How It Works</a>
-        <a href="#survival">Survival Systems</a>
-        <a href="#crafting">Build & Craft</a>
-        <a href="#gather">Gather & Trade</a>
-        <a href="#biomes">Biomes</a>
-        <a href="#multiplayer">Multiplayer</a>
-        <a href="#faq">FAQ</a>
+      <nav class="nav">
+        <button id="openWeather" class="btn solid">Weather</button>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="top" class="hero">
-    <div class="container hero-inner">
-      <h1>Every mile is a story.</h1>
-      <p class="tagline">
-        A survival adventure for up to six friends.  
-        Start with a cart. Travel 12 miles. Weather, wildlife, and random events shape every run.
-      </p>
-      <div class="chips">
-        <span class="chip">Procedural runs</span>
-        <span class="chip">Dynamic weather</span>
-        <span class="chip">Handcrafted systems</span>
-        <span class="chip">Mobile-ready</span>
-      </div>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Manual</h1>
+      <p class="sub">This site explains game systems. Click the button to open the full <strong>Weather</strong> design.</p>
+      <button id="openWeather2" class="btn outline">Open Weather</button>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>What is <em>A Long Hike</em>?</h2>
-      <p>
-        <strong>A Long Hike</strong> is a survival adventure where every run feels like a brand-new story.
-        You and up to six friends arrive on a massive island with just a cart, a few basic supplies, and the
-        goal of making it <strong>12 miles</strong> through the wilderness to the checkpoint. The journey won’t be easy — and that’s the point.
-      </p>
-      <div class="grid three">
-        <div class="card">
-          <h3>🌲 Survive the Wild</h3>
-          <p>Forests, rivers, hills, campsites, and buildings re-generate each run and are filled with loot, resources, and surprises. Animals roam; monsters stalk at night or in abandoned structures. Random events keep every mile unpredictable.</p>
-        </div>
-        <div class="card">
-          <h3>🔧 Systems-Driven</h3>
-          <p>Fire spreads, rain wets logs, food spoils in weather, water must be boiled or filtered, and lightning can set objects ablaze — even shake your camera on impact.</p>
-        </div>
-        <div class="card">
-          <h3>🎒 Progress & Mastery</h3>
-          <p>Grind safer biomes to earn cash, buy gear, and flex advanced equipment as you take on harsher environments and longer runs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- WEATHER: initially collapsed; JS expands it -->
+  <section id="weather" class="sheet" aria-hidden="true">
+    <div class="wrap prose">
+      <h2>Weather System — Design Overview</h2>
+      <p class="tag">Scope: Behavior & player impact. <em>No code.</em></p>
 
-  <!-- How It Works -->
-  <section id="how" class="section alt">
-    <div class="container">
-      <h2>How It Works</h2>
-      <ol class="steps">
-        <li><span>1</span> Spawn with a cart and basic supplies.</li>
-        <li><span>2</span> Scout the island — routes, camps, structures, risks.</li>
-        <li><span>3</span> Hunt, fish, forage, and loot to stock the cart.</li>
-        <li><span>4</span> Build, craft, and <em>weld</em> structures onto your cart; pack up and move.</li>
-        <li><span>5</span> Manage hunger, thirst, and temperature as weather shifts.</li>
-        <li><span>6</span> Hit mile markers, survive events, and reach the 12-mile checkpoint.</li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Survival Systems -->
-  <section id="survival" class="section">
-    <div class="container">
-      <h2>Survival Systems 💧🥩🌡️</h2>
-      <div class="grid two">
-        <div class="card">
-          <h3>Stats That React</h3>
-          <p>Hunger, thirst, and body temperature respond to weather, time, and activity. Buckets fill in rain or rivers. Water must be boiled or filtered; let it sit too long on a fire and it evaporates.</p>
-        </div>
-        <div class="card">
-          <h3>Fire & Weather</h3>
-          <p>Campfires use rocks and logs; logs get wet in rain. Fire spreads to flammables. Thunderstorms bring rolling clouds and lightning strikes that ignite objects.</p>
-        </div>
-        <div class="card">
-          <h3>Cooking & Spoilage</h3>
-          <p>Roast meat, grill fish, and forage berries — but food left out in stormy weather will spoil, pushing you to plan meals around the elements.</p>
-        </div>
-        <div class="card">
-          <h3>Down but Not Out</h3>
-          <p>If you fall, teammates can revive you with medkits, restoring your stats and giving you another shot.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Build & Craft -->
-  <section id="crafting" class="section alt">
-    <div class="container">
-      <h2>Build, Craft, and Adapt 🔨🔥</h2>
-      <div class="grid three">
-        <div class="card">
-          <h3>Blueprints</h3>
-          <p>Combine resources into weapons, tools, and gear. Build structures and weld them onto your cart — then pack them up when it’s time to roll.</p>
-        </div>
-        <div class="card">
-          <h3>Campfires</h3>
-          <p>Place rocks, add logs, light the flame. Fuel runs out if you’re careless; wet logs resist burning until dried.</p>
-        </div>
-        <div class="card">
-          <h3>Cart as a Base</h3>
-          <p>Your cart carries your story: storage, add-ons, and welded builds that evolve as you push deeper into the island.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gather & Trade -->
-  <section id="gather" class="section">
-    <div class="container">
-      <h2>Gather, Loot, and Trade 🎣🍓💰</h2>
-      <div class="grid three">
-        <div class="card">
-          <h3>Fishing</h3>
-          <p>Cast into lakes and rivers; cook your catch at camp.</p>
-        </div>
-        <div class="card">
-          <h3>Foraging & Hunting</h3>
-          <p>Collect berries and resources; hunt pigs, sheep, wolves, and bears for meat and pelts.</p>
-        </div>
-        <div class="card">
-          <h3>Loot & Shops</h3>
-          <p>Explore structures for valuables, sell at sniper-guarded safezones, and hit lobby shops that refresh every five minutes — including rare finds like the Gold Rifle.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Biomes -->
-  <section id="biomes" class="section alt">
-    <div class="container">
-      <h2>Biomes & Progression ❄️🏜️🌲</h2>
-      <div class="grid three">
-        <div class="card biome">
-          <h3>Forest</h3>
-          <p>Balanced, classic survival. Great for learning systems and grinding cash.</p>
-        </div>
-        <div class="card biome">
-          <h3>Desert</h3>
-          <p>Scorching heat, scarce water, aggressive wildlife. Hydration strategy is king.</p>
-        </div>
-        <div class="card biome">
-          <h3>Arctic</h3>
-          <p>Bitter cold where tents, pelts, and fires stand between you and frostbite.</p>
-        </div>
-      </div>
-      <p class="note">Progression ties it all together: master one biome to prepare for the next.</p>
-    </div>
-  </section>
-
-  <!-- Multiplayer -->
-  <section id="multiplayer" class="section">
-    <div class="container">
-      <h2>Multiplayer & Polish 🤝</h2>
-      <ul class="bullets">
-        <li>Up to <strong>six players</strong> per run — more players means more carts.</li>
-        <li>Cinematic intro, dramatic ending sequences, and a final base event where teamwork builds the bridge to escape.</li>
-        <li>Badges every two miles and a special win badge at 12 miles.</li>
-        <li>Fully optimized mobile controls designed for touch.</li>
-        <li>Hundreds of tweaks: from welding to weather realism for smooth gameplay.</li>
+      <h3>1) Goals</h3>
+      <ul>
+        <li>Make each run feel unique via believable, systemic weather.</li>
+        <li>Create “tension arcs” (calm → buildup → danger → relief) that affect planning and route choice.</li>
+        <li>Integrate tightly with survival stats, fire, water, food, and traversal.</li>
       </ul>
-    </div>
-  </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="section alt">
-    <div class="container">
-      <h2>FAQ</h2>
-      <div class="accordion">
-        <button class="acc" aria-expanded="false">Is each run really different?</button>
-        <div class="panel">
-          <p>Yes. Terrain, structures, wildlife, events, weather, and loot vary every run — your route and decisions create the story.</p>
-        </div>
+      <h3>2) Global Rules</h3>
+      <ul>
+        <li><strong>Day/Night:</strong> Day 06:00–21:00 (full cycle ≈ 5 real-time minutes). Nights are colder and riskier.</li>
+        <li><strong>Run Profile:</strong> Each run is seeded with a profile (e.g., <em>dry</em>, <em>stormy</em>, <em>cold-biased</em>) that biases frequency and intensity caps.</li>
+        <li><strong>Local Cells:</strong> Route is divided into cells; cells can host different states simultaneously (clear ahead, storm behind).</li>
+      </ul>
 
-        <button class="acc" aria-expanded="false">Is this site for playing?</button>
-        <div class="panel">
-          <p>No — this site explains the game. You play on Roblox. (We’ll add official links when the game page is public.)</p>
-        </div>
+      <h3>3) States & Transitions</h3>
+      <ul>
+        <li><strong>Clear:</strong> max visibility, light breeze.</li>
+        <li><strong>Overcast:</strong> cloud cover increases; ambient light cools toward green-grey.</li>
+        <li><strong>Light Rain:</strong> surfaces dampen; mild chill; buckets fill slowly.</li>
+        <li><strong>Heavy Rain:</strong> visibility loss; footprints/surfaces wet; buckets fill fast.</li>
+        <li><strong>Thunderstorm:</strong> lightning strikes, thunder delay based on distance; strong gusts; highest wetting rate.</li>
+        <li><strong>Cold Front:</strong> temperature trend drops for minutes; arctic biomes push toward lethal cold without shelter.</li>
+        <li><strong>Heat Wave:</strong> desert bias; hydration/heatstroke pressure increases; shade matters.</li>
+      </ul>
 
-        <button class="acc" aria-expanded="false">How many players can join?</button>
-        <div class="panel">
-          <p>Up to six per run. With more players, the caravan expands with more carts.</p>
-        </div>
+      <div class="callout">
+        <strong>Storm Buildup:</strong> Clouds & darkness ramp up over ~20 seconds <em>before</em> rain/thunder begin, with wind-up audio & distant thunder cues.
+      </div>
+
+      <h3>4) Timing & Generation</h3>
+      <ul>
+        <li>Each mile rolls an “event window” (none / light / severe) with min–max duration and cooldown.</li>
+        <li>Biome weighting: Forest balanced; Desert favors heat waves & dust gusts; Arctic favors cold fronts & blizzard-like overcast.</li>
+        <li>Anti-streak: Prevent identical severe events from chaining unless run profile is storm-heavy.</li>
+      </ul>
+
+      <h3>5) Player-Facing Effects</h3>
+      <h4>Temperature & Comfort</h4>
+      <ul>
+        <li>Temp is a running value influenced by time, biome, elevation, wind, and precipitation.</li>
+        <li>Low temp → higher calorie burn; hypothermia risk; tents/pelts/fires counter it.</li>
+        <li>High temp → faster thirst; heatstroke risk; shade/hydration required.</li>
+      </ul>
+
+      <h4>Water</h4>
+      <ul>
+        <li>Buckets fill in rain or rivers; dirty water must be boiled/filtered before drinking.</li>
+        <li>Water left on fires can evaporate over time (waste).</li>
+      </ul>
+
+      <h4>Fire & Fuel</h4>
+      <ul>
+        <li>Logs have states: <em>dry</em> → <em>damp</em> → <em>wet</em>. Rain pushes state forward; heat pulls it back.</li>
+        <li>Wet logs are hard to ignite and burn shorter; heavy rain suppresses spread.</li>
+        <li>Lightning can ignite flammables even in rain (reduced chance).</li>
+      </ul>
+
+      <h4>Food</h4>
+      <ul>
+        <li>Raw → cooked → burned/ruined; rain & exposure speed up spoilage.</li>
+        <li>Cold slows decay; hot, wet conditions speed it up.</li>
+      </ul>
+
+      <h4>Wind & Visibility</h4>
+      <ul>
+        <li>Wind has baseline (profile) + gusts (events); gusts sway foliage and push smoke.</li>
+        <li>Heavy rain and storms reduce draw distance; flash/roll thunder sells strike distance (audio delay).</li>
+      </ul>
+
+      <h3>6) Interaction & Strategy</h3>
+      <ul>
+        <li><strong>Shelter:</strong> Tents, caves, structures block wetting/cooling; fire inside shelter gives best heat per fuel.</li>
+        <li><strong>Cart as Base:</strong> Can carry fuel, water, tents; more mass vs. speed tradeoffs.</li>
+        <li><strong>Route Choice:</strong> Detour to camps during buildup phases; push miles during clear windows.</li>
+      </ul>
+
+      <h3>7) Balancing & Safeguards</h3>
+      <ul>
+        <li>No unwinnable loops: severe events have max duration and guaranteed lulls.</li>
+        <li>Spawn fairness: lightning avoids direct chain hits on the same player within a short window.</li>
+        <li>Tutorial mile biases “learning weather” with milder ranges.</li>
+      </ul>
+
+      <h3>8) Tuning Knobs (Non-code)</h3>
+      <ul class="cols">
+        <li>Rain start/stop fade times</li><li>Lightning min/max interval</li>
+        <li>Gust frequency & strength</li><li>Wet→dry recovery rates</li>
+        <li>Food spoil multipliers (by state)</li><li>Temp shift per biome/time</li>
+        <li>Event duration/cooldown ranges</li><li>Visibility reduction per state</li>
+      </ul>
+
+      <div class="back-row">
+        <a class="btn ghost" href="#top" id="backTop">Back to top</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> A Long Hike • An OK Games / Nukes Studios project</p>
-      <a class="top" href="#top">Back to top ↑</a>
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> 10K Steps • A Long Hike — All rights reserved.</p>
     </div>
   </footer>
 
