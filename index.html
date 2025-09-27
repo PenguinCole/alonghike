@@ -32,11 +32,16 @@
 
       <div class="alpha-badge" aria-label="project state">ALPHA</div>
 
+
+
+
+       <!-- CATEGORIES -->
  <nav class="nav" aria-label="Primary">
   <a class="nav-link active" href="#overview" data-route="overview">Overview</a>
   <a class="nav-link" href="#weather" data-route="weather">Weather</a>
   <a class="nav-link" href="#campfire" data-route="campfire">Campfire</a>
   <a class="nav-link" href="#animals" data-route="animals">Animals</a>
+  <a class="nav-link" href="#monsters" data-route="monsters">Monsters</a>
   <a class="nav-link" href="#contact" data-route="contact">Contact</a>
 </nav>
 
@@ -47,6 +52,9 @@
   <main id="main" tabindex="-1">
     
     
+
+
+
     <!-- OVERVIEW VIEW -->
     <section id="view-overview" class="view active" role="region" aria-labelledby="overview-heading">
       <div class="hero">
@@ -71,6 +79,9 @@
         <div class="wrap grid">
         
         
+
+
+
      <!-- Weather category card -->
           <a class="card link" href="#weather" data-route="weather">
             <div class="card-top">
@@ -84,6 +95,11 @@
             <span class="cta">Read</span>
           </a>
 
+
+
+
+
+
          <!-- Campfire category card -->
 <a class="card link" href="#campfire" data-route="campfire">
   <div class="card-top">
@@ -95,6 +111,12 @@
   </p>
   <span class="cta">Read</span>
 </a>
+
+
+
+
+
+
 
             <!-- Animals category card -->
 <a class="card link" href="#animals" data-route="animals">
@@ -108,6 +130,24 @@
   </p>
   <span class="cta">Read</span>
 </a>
+
+ <!-- Monsters category card -->
+
+<a class="card link" href="#monsters" data-route="monsters">
+  <div class="card-top">
+    <h2 class="card-title">Monsters</h2>
+    <span class="chip">Danger</span>
+  </div>
+  <p class="card-text">
+    Not all dangers are natural — monsters hunt at night, sniff out meat,  
+    and stalk players with unique AI and terrifying behavior.
+  </p>
+  <span class="cta">Read</span>
+</a>
+
+
+
+
 
 
 
@@ -313,6 +353,8 @@
     </section>
 
 
+
+
     <!-- ANIMALS VIEW -->   
     <section id="view-animals" class="view" role="region" aria-labelledby="animals-heading">
   <header class="page-header">
@@ -405,6 +447,70 @@
     </div>
   </section>
 </section>
+
+
+    <!-- MONSTERS VIEW -->
+
+<section id="view-monsters" class="view" role="region" aria-labelledby="monsters-heading">
+  <header class="page-header">
+    <div class="wrap">
+      <h1 id="monsters-heading">Monsters</h1>
+      <p class="sub">
+        Beyond wildlife lurk supernatural horrors — AI-driven predators that spawn with the night,  
+        scale with weather and moonlight, and adapt to player behavior.
+      </p>
+      <div class="pill-row">
+        <span class="pill">Night Spawn</span>
+        <span class="pill">Fear Aura</span>
+        <span class="pill">Unique AI</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap prose">
+      <img class="monsters-img" src="images/monsters.png" alt="Monsters in a long hike" loading="lazy" />
+
+      <h2>Species</h2>
+      <ul>
+        <li><strong>Nightclaw:</strong> Heavy-hitting beast with sword-like swings, thrives in thunderstorms.</li>
+        <li><strong>Lumen:</strong> Fast claw attacker, the most agile stalker in the dark.</li>
+        <li><strong>Sprig:</strong> Small but persistent — often spawns in groups and wears players down.</li>
+      </ul>
+
+      <h2>Behavior</h2>
+      <ul>
+        <li><strong>Night-bound:</strong> Monsters spawn only after sunset, rates scale with moon phase.</li>
+        <li><strong>Weather-driven:</strong> Rain and storms increase Nightclaw and Lumen spawn weight.</li>
+        <li><strong>Fire avoidance:</strong> They keep 28 studs away from campfires but circle the edges.</li>
+        <li><strong>Meat attraction:</strong> Monsters sniff corpses and meat — pausing to eat before resuming the hunt.</li>
+        <li><strong>Fear aura:</strong> Being near a monster drains stamina faster and blurs vision.</li>
+      </ul>
+
+      <h2>AI Systems</h2>
+      <ul>
+        <li><strong>Attack caps:</strong> No more than 3 monsters can attack one player at once.</li>
+        <li><strong>Sleep/wake cycle:</strong> Far monsters go idle, saving performance until players approach.</li>
+        <li><strong>Dynamic death:</strong> Custom screams, collapse animations, and loot drops.</li>
+        <li><strong>Fire damage:</strong> Standing in flames or firelight burns their health down.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Immersion:</strong> Monsters aren’t scripted encounters.  
+        They are fully systemic — every hunt feels unique, shaped by players, campfires, weather, and moonlight.
+      </div>
+
+      <div class="end-nav">
+        <a class="btn outline" href="#overview" data-route="overview">← Back to Overview</a>
+        <a class="btn ghost top" href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+
+
 
 
 
