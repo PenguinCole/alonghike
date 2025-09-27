@@ -10,47 +10,21 @@
   --shadow: 0 12px 34px rgba(18,58,96,0.18);
   --radius: 14px;
 }
-.campfire-img {
+
+.feature-img {
   display: block;
-  max-width: 700px;  /* pick a nice limit (600–800px works well) */
-  width: 100%;
-  height: auto;
+  max-width: 700px;   /* big on desktop */
+  width: 100%;        /* shrink to fit on smaller screens */
+  height: auto;       /* keep natural ratio */
   margin: 20px auto;
   border-radius: 16px;
   border: var(--border);
   box-shadow: var(--shadow);
 }
 
-.weather-img {
-  display: block;
-  max-width: 700px;   /* cap size on desktop */
-  width: 100%;
-  height: auto;
-  margin: 20px auto;
-  border-radius: 16px;
-  border: var(--border);
-  box-shadow: var(--shadow);
-}
-.animals-img {
-  display: block;
-  max-width: 700px;   /* keeps it from going huge on PC */
-  width: 100%;
-  height: auto;
-  margin: 20px auto;
-  border-radius: 16px;
-  border: var(--border);
-  box-shadow: var(--shadow);
-}
-.monsters-img {
-  display: block;
-  max-width: 700px;   /* keeps it from going huge on PC */
-  width: 100%;
-  height: auto;
-  margin: 20px auto;
-  border-radius: 16px;
-  border: var(--border);
-  box-shadow: var(--shadow);
-}
+
+
+
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
